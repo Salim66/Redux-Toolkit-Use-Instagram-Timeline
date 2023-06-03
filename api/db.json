@@ -1,0 +1,17 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "auth_name": "Salim Hasan",
+            "auth_photo": "https://w7.pngwing.com/pngs/362/969/png-transparent-high-five-animation-team-team-miscellaneous-blue-ink-thumbnail.png",
+            "content": "This is my first post",
+            "photo": "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/2020-08/shutterstock_1731284125_0.jpg?itok=89UrdUt_",
+            "post_time": "",
+            "reactions": {
+                "like": 0,
+                "dislike": 0,
+                "love": 0
+            }
+        }
+    ]
+}
