@@ -1,17 +1,31 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "auth_name": "Salim Hasan",
-            "auth_photo": "https://w7.pngwing.com/pngs/362/969/png-transparent-high-five-animation-team-team-miscellaneous-blue-ink-thumbnail.png",
-            "content": "This is my first post",
-            "photo": "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/2020-08/shutterstock_1731284125_0.jpg?itok=89UrdUt_",
-            "post_time": "",
-            "reactions": {
-                "like": 0,
-                "dislike": 0,
-                "love": 0
-            }
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "auth_name": "Salim Hasan",
+      "auth_photo": "https://w7.pngwing.com/pngs/362/969/png-transparent-high-five-animation-team-team-miscellaneous-blue-ink-thumbnail.png",
+      "content": "This is my first post",
+      "photo": "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/2020-08/shutterstock_1731284125_0.jpg?itok=89UrdUt_",
+      "post_time": "",
+      "reactions": {
+        "like": 0,
+        "dislike": 0,
+        "love": 0
+      }
+    },
+    {
+      "auth_name": "Robiul Khan",
+      "auth_photo": "https://www.uttamphosphates.com/wp-content/uploads/2019/10/tm6.jpg",
+      "content": "This is my second post",
+      "photo": "https://st4.depositphotos.com/20727252/24943/v/450/depositphotos_249436722-stock-illustration-continuous-line-drawing-of-office.jpg",
+      "id": 2
+    },
+    {
+      "auth_name": "Muskan Khan",
+      "auth_photo": "https://img.freepik.com/free-photo/woman-student-studying-laptop-cafe_1303-28924.jpg",
+      "content": "This is third post of my life",
+      "photo": "https://www.shutterstock.com/image-photo/woman-talking-coworker-office-desk-260nw-1967493586.jpg",
+      "id": 3
+    }
+  ]
 }
