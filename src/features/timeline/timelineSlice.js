@@ -10,7 +10,22 @@ export const timelineSlice = createSlice({
         error: null,
         message: null
     },
-    reducers: {},
+    reducers: {
+        makeLove: {
+            reducer: (state, { type, payload }) => {
+                state.posts[state.posts.findIndex((data) => data.id === payload.id)].reactions.love += 1;
+            },
+            prepare: (id, name, job) => {
+                return {
+                    payload: {
+                        id,
+                        name,
+                        job
+                    }
+                }
+            }
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchPost.pending, (state, { type, payload }) => {
@@ -48,6 +63,6 @@ export const timelineSlice = createSlice({
 export const getAllPost = (state) => state.timeline.posts;
 
 // export 
-export const { } = timelineSlice.actions;
+export const { makeLove } = timelineSlice.actions;
 
 export default timelineSlice.reducer;

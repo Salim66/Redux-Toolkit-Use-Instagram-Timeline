@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainTimeline.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllPost } from '../../features/timeline/timelineSlice';
+import { getAllPost, makeLove } from '../../features/timeline/timelineSlice';
 import { formatDistanceToNow } from 'date-fns';
 import { deletePost } from '../../features/timeline/timelineAPI';
 
@@ -25,7 +25,7 @@ const MainTimeline = () => {
                         {photo && <img src={photo} alt="" />}
                     </div>
                     <div className="post-reactions">
-                        <div className="reaction-item">
+                        <div onClick={() => dispatch(makeLove(id, "Salim Hasan", "MERN"))} className="reaction-item">
                             <i class='bx bx-heart'></i>
                             <span>{ reactions.love }</span>
                         </div>

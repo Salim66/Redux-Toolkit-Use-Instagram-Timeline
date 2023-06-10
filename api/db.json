@@ -12,6 +12,19 @@
         "dislike": 0
       },
       "id": 2
+    },
+    {
+      "auth_name": "Salim Hasan",
+      "auth_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwZrlJl33ox0Eh6Cep-yk4Bnoh7wWEmQqEKw&usqp=CAU",
+      "content": "This is third post of my life",
+      "photo": "https://i.postimg.cc/BQKyDcjn/member6.jpg",
+      "post_time": 1686391706951,
+      "reactions": {
+        "love": 0,
+        "like": 0,
+        "dislike": 0
+      },
+      "id": 3
     }
   ]
 }
