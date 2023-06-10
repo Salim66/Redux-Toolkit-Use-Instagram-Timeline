@@ -1,42 +1,45 @@
 import React from 'react';
 import './MainTimeline.scss';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getAllPost } from '../../features/timeline/timelineSlice';
+import { formatDistanceToNow } from 'date-fns';
+import { deletePost } from '../../features/timeline/timelineAPI';
 
 const MainTimeline = () => {
     const posts = useSelector(getAllPost);
+    const dispatch = useDispatch();
     return (
         <div className="timeline-all-posts">
-            {
-                [...posts].reverse().map((data, index) => {
-                return <div className="timeline-box">
+            {[...posts].length > 0 ? [...posts].reverse().map(({ id, auth_name, auth_photo, post_time, content, photo, reactions }, index) => {
+                return <div className="timeline-box" key={index}>
                     <div className="auth-info">
-                        <img src={data.auth_photo} alt="" />
+                        <img src={auth_photo} alt="" />
                         <div className="auth-details">
-                            <h3>{ data.auth_name }</h3>
-                            <span>12 min ago</span>
+                            <h3>{auth_name}</h3>
+                            <span>{formatDistanceToNow(post_time) === '1 minute' ? 'Just Now' : formatDistanceToNow(post_time) + " ago" }</span>
                         </div>
+                        <button onClick={() => dispatch(deletePost(id))}><i class='bx bx-x'></i></button>
                     </div>
                     <div className="post-content">
-                        <p>{data.content}</p>
-                        <img src={data.photo} alt="" />
+                        <p>{content}</p>
+                        {photo && <img src={photo} alt="" />}
                     </div>
                     <div className="post-reactions">
                         <div className="reaction-item">
                             <i class='bx bx-heart'></i>
-                            <span>10</span>
+                            <span>{ reactions.love }</span>
                         </div>
                         <div className="reaction-item">
                             <i class='bx bx-like' ></i>
-                            <span>10</span>
+                            <span>{reactions.like}</span>
                         </div>
                         <div className="reaction-item">
                             <i class='bx bx-dislike' ></i>
-                            <span>10</span>
+                            <span>{reactions.dislike}</span>
                         </div>
                     </div>
                 </div>
-            })}
+            }): ""}
         </div>
     )
 };

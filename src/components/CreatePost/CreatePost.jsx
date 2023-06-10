@@ -11,7 +11,13 @@ const CreatePost = () => {
     auth_name: "",
     auth_photo: "",
     content: "",
-    photo: ""
+    photo: "",
+    post_time: Date.now(),
+    reactions: {
+      love: 0,
+      like: 0,
+      dislike: 0
+    }
   });
 
   const handleInput = (e) => {

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createPost, fetchPost } from "./timelineAPI";
+import { createPost, deletePost, fetchPost } from "./timelineAPI";
 
 // create timeline slice
 export const timelineSlice = createSlice({
@@ -36,6 +36,11 @@ export const timelineSlice = createSlice({
             .addCase(createPost.rejected, (state, { type, payload }) => {
                 state.status = "failed";
                 state.message = "Post created failed";
+            })
+            .addCase(deletePost.fulfilled, (state, { type, payload }) => {
+                state.status = "successed";
+                state.message = "Post deleted successful";
+                state.posts = state.posts.filter((data) => data.id !== payload);
             });
     }
 });
